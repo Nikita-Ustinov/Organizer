@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace Organaizer
+namespace Organizer
 {
 	public class ListAction
 	{

@@ -25,6 +25,7 @@ namespace Organizer
 			Application.EnableVisualStyles();
 			Application.SetCompatibleTextRenderingDefault(false);
 			Application.Run(new MainForm());
+			MainForm m =new MainForm();
 		}
 		
 	}

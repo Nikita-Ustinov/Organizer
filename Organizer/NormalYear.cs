@@ -2,14 +2,17 @@
 
 namespace Organizer
 {
-	
-	public class LeapYear: Year
-	{	
+	/// <summary>
+	/// Description of NormalYear.
+	/// </summary>
+	public class NormalYear: Year
+	{
 		
-		public LeapYear(int numberOfYear){
+		
+		public NormalYear(int numberOfYear){
 			YearNumber=numberOfYear;
 			Month[0] = new Day[31];
-			Month[1] = new Day[29];
+			Month[1] = new Day[28];
 			Month[2] = new Day[31];
 			Month[3] = new Day[30];
 			Month[4] = new Day[31];

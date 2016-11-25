@@ -3,3 +3,5 @@ C:\Users\Comp\Documents\SharpDevelop Projects\Organizer\Organizer\bin\Debug\Orga
 C:\Users\Comp\Documents\SharpDevelop Projects\Organizer\Organizer\obj\Debug\Organizer.csprojResolveAssemblyReference.cache
 C:\Users\Comp\Documents\SharpDevelop Projects\Organizer\Organizer\obj\Debug\Organizer.exe
 C:\Users\Comp\Documents\SharpDevelop Projects\Organizer\Organizer\obj\Debug\Organizer.pdb
+C:\Users\Comp\Documents\SharpDevelop Projects\Organizer\Organizer\obj\Debug\Organizer.MainForm.resources
+C:\Users\Comp\Documents\SharpDevelop Projects\Organizer\Organizer\obj\Debug\Organizer.csproj.GenerateResource.Cache
