@@ -1,0 +1,5 @@
+C:\Users\Comp\Documents\SharpDevelop Projects\Organizer\Organizer\bin\Debug\Organizer.exe
+C:\Users\Comp\Documents\SharpDevelop Projects\Organizer\Organizer\bin\Debug\Organizer.pdb
+C:\Users\Comp\Documents\SharpDevelop Projects\Organizer\Organizer\obj\Debug\Organizer.csprojResolveAssemblyReference.cache
+C:\Users\Comp\Documents\SharpDevelop Projects\Organizer\Organizer\obj\Debug\Organizer.exe
+C:\Users\Comp\Documents\SharpDevelop Projects\Organizer\Organizer\obj\Debug\Organizer.pdb
