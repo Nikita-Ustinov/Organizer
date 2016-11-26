@@ -126,7 +126,7 @@ namespace Organizer
 			this.button2.TabIndex = 8;
 			this.button2.Text = "Показать";
 			this.button2.UseVisualStyleBackColor = true;
-			this.button2.Click += new System.EventHandler(this.Button1Click);
+			this.button2.Click += new System.EventHandler(this.Button2Click);
 			// 
 			// label3
 			// 
