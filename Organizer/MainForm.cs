@@ -9,29 +9,37 @@ namespace Organizer
 	/// Description of MainForm.
 	/// </summary>
 	public partial class MainForm : Form
-	{
+	{	
+		ListYear calendar = new ListYear();
+		
 		public MainForm()
 		{
+			createCalendar();
 			InitializeComponent();
-//			createCalendar();
-			
-			
-			
+				
 		}
-		
-		
-		
+
 		
 		void createCalendar() {
-			int pocetLet=8;
-			ListYear calendar = new ListYear();
-			for (int i=0; i<pocetLet; i++) {
-				textBox1.Text= calendar.addYear().ToString();
+			for (int i=0; i<10; i++) {
+				calendar.addYear();
 			}
 		}
 		
+		void Button1Click(object sender, EventArgs e)
+		{
+			doNewAction();
+		}
 		
 		
+		void doNewAction() {
+			String [] date = textBox1.Text.Split('.');
+			int nDay = int.Parse(date[0]);
+			int nMonth = int.Parse(date[1]);
+			int nYear = int.Parse(date[2]);
+			String popisDela = textBox2.Text;
+			calendar.findDate(nDay, nMonth, nYear, popisDela);
+		}
 		
 	}
 }

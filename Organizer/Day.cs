@@ -5,7 +5,7 @@ namespace Organizer
 	public class Day
 	{
 		public int numberOfDay { get; set; }
-		ListAction toDoList;
+		public ListAction toDoList { get; set; }
 		
 		public Day(){}
 		

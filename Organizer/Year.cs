@@ -5,10 +5,10 @@ namespace Organizer
 	/// <summary>
 	/// Description of Year.
 	/// </summary>
-	public class Year
+	public  class Year
 	{	public Year Next;
 		protected int YearNumber;
-		protected Day [][] Month = new Day[12][];
+		protected  Day [][] Month = new Day[12][];
 			
 		public Year(){}
 		
@@ -21,17 +21,24 @@ namespace Organizer
 			int count=0;
 			for (int i=0; i<12; i++) {
 				for (int j=0; j<Month[i].Length; j++) {
-						s+=Month[i][j].numberOfDay;
-						s+=" ";
-						count++;
-						if (count==7){
-							s+="\r\n";
-							count=0;
-						}
+					s+=Month[i][j].numberOfDay;
+					s+=" ";
+					count++;
+					if (count==7){
+						s+="\r\n";
+						count=0;
+					}
 				}
 			}
 			
 			return s;
+		}
+		
+		
+		public void findMonth( Year yearNeeded,int nMonth,int nDay, String popisDela) {
+			if (yearNeeded.Month[nMonth][nDay].toDoList == null) {
+				yearNeeded.Month[nMonth][nDay].toDoList= new ListAction(popisDela);
+			}
 		}
 		
 	}
