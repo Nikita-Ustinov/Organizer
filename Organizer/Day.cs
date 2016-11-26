@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace Organaizer
+namespace Organizer
 {
 	public class Day
 	{
@@ -10,7 +10,7 @@ namespace Organaizer
 		public Day(){}
 		
 		public Day(int j) {
-		 numberOfDay = j;
+		 numberOfDay = j+1;
 		}
 		
 	}
