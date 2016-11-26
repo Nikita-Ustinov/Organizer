@@ -39,6 +39,26 @@ namespace Organizer
 			if (yearNeeded.Month[nMonth][nDay].toDoList == null) {
 				yearNeeded.Month[nMonth][nDay].toDoList= new ListAction(popisDela);
 			}
+			else {
+				Action templ = yearNeeded.Month[nMonth][nDay].toDoList.First;
+				while(templ.next!=null) {
+					templ = templ.next;
+				}
+				templ.PopisDela=popisDela;
+			}
+		}
+		
+		public String findMonth( Year yearNeeded,int nMonth,int nDay) {
+			if (yearNeeded.Month[nMonth][nDay].toDoList == null) {
+			return "Записей нет";
+			}
+			else {
+				Action templ = yearNeeded.Month[nMonth][nDay].toDoList.First;
+				while(templ.next!=null) {
+					templ = templ.next;
+				}
+				return templ.PopisDela;
+			}
 		}
 		
 	}

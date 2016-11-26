@@ -8,7 +8,7 @@ namespace Organizer
 	public class ListYear
 	{	
 		int LenthCalendar=0;
-		Year First;
+		 Year First;
 		int FirstYear = 2012;
 		
 		public ListYear()
@@ -37,6 +37,12 @@ namespace Organizer
 		public void findDate(int nDay,int nMonth,int nYear, String popisDela){
 			Year yearNeeded = findYear(nYear);
 			yearNeeded.findMonth(yearNeeded, nMonth, nDay, popisDela);
+		}
+		
+		public String findDate(int nDay,int nMonth,int nYear) {
+			Year yearNeeded = findYear(nYear);
+			String popisDela = yearNeeded.findMonth(yearNeeded, nMonth, nDay);
+			return popisDela;
 		}
 		
 		

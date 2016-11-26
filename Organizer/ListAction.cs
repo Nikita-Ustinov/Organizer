@@ -5,7 +5,7 @@ namespace Organizer
 	public class ListAction
 	{
 		int LengthToDoList=0;
-		Action First=null;
+		public Action First;
 		
 		public ListAction(String popisDela)
 		{ 	
@@ -13,12 +13,7 @@ namespace Organizer
 				First = new Action(popisDela);
 			}
 			else {
-				Action templ;
-				templ=First;
-				while(templ.next!=null) {
-					templ=templ.next;
-				}
-				templ.next= new Action(popisDela);
+				
 			}
 		}
 		
@@ -37,8 +32,20 @@ namespace Organizer
 			}
 		}
 		
+		public void addAction(String popisDela) {
+				Action templ=First;				
+				while(templ.next!=null) {
+					templ=templ.next;
+				}
+				templ.next= new Action(popisDela);
+		}
 		
-		
+		public void addAction(String popisDela, int priority) {
+					Action templ=First;				
+				while(templ.next!=null) {
+					templ=templ.next;
+				}
+				templ.next= new Action(popisDela, priority );
 		}
 	}
-
+}
