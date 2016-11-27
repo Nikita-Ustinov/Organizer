@@ -1,0 +1,64 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<ClassDiagram Zoom="1" MajorVersion="1" MinorVersion="1" MembersFormat="FullSignature">
+  <Class Name="Organizer.MainForm" Collapsed="False">
+    <Position X="0.5" Y="4.5" Width="2.847692" />
+    <Compartments>
+      <Compartment Name="Methods" Collapsed="False" />
+      <Compartment Name="Fields" Collapsed="False" />
+    </Compartments>
+  </Class>
+  <Class Name="Organizer.Year" Collapsed="False">
+    <Position X="0.5" Y="0.5" Width="1.39175" />
+    <Compartments>
+      <Compartment Name="Methods" Collapsed="False" />
+      <Compartment Name="Fields" Collapsed="False" />
+    </Compartments>
+  </Class>
+  <Class Name="Organizer.Day" Collapsed="False">
+    <Position X="0.5" Y="8.6" Width="1.517087" />
+    <Compartments>
+      <Compartment Name="Properties" Collapsed="False" />
+      <Compartment Name="Methods" Collapsed="False" />
+    </Compartments>
+  </Class>
+  <Class Name="Organizer.LeapYear" Collapsed="False">
+    <Position X="0.5" Y="3.1" Width="1.560885" />
+    <Compartments>
+      <Compartment Name="Methods" Collapsed="False" />
+    </Compartments>
+  </Class>
+  <Class Name="Organizer.ListAction" Collapsed="False">
+    <Position X="0.5" Y="10.7" Width="1.563356" />
+    <Compartments>
+      <Compartment Name="Methods" Collapsed="False" />
+      <Compartment Name="Fields" Collapsed="False" />
+    </Compartments>
+  </Class>
+  <Class Name="Organizer.NormalYear" Collapsed="False">
+    <Position X="2.4" Y="3.1" Width="1.788297" />
+    <Compartments>
+      <Compartment Name="Methods" Collapsed="False" />
+    </Compartments>
+  </Class>
+  <Class Name="Organizer.ListYear" Collapsed="False">
+    <Position X="0.5" Y="13.1" Width="1.442453" />
+    <Compartments>
+      <Compartment Name="Methods" Collapsed="False" />
+      <Compartment Name="Fields" Collapsed="False" />
+    </Compartments>
+  </Class>
+  <Class Name="Organizer.Action" Collapsed="False">
+    <Position X="0.5" Y="15.7" Width="1.403703" />
+    <Compartments>
+      <Compartment Name="Properties" Collapsed="False" />
+      <Compartment Name="Methods" Collapsed="False" />
+      <Compartment Name="Fields" Collapsed="False" />
+    </Compartments>
+  </Class>
+  <Class Name="Organizer.Program" Collapsed="False">
+    <Position X="0.5" Y="18.3" Width="1.444186" />
+    <Compartments>
+      <Compartment Name="Methods" Collapsed="False" />
+    </Compartments>
+  </Class>
+</ClassDiagram>
