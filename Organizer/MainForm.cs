@@ -17,48 +17,56 @@ namespace Organizer
 		{
 			createCalendar();
 			InitializeComponent();
-				
+			label1.Text = "Vyberte datum na ktery chcete ulozit nove připomínání";
+			button1.Text = "Najit den";
+			button2.Text = "Ulozit nove připomínání ";
 		}
 
 		
 		void createCalendar() {
-			for (int i=0; i<10; i++) {
+			for (int i=0; i<200; i++) {
 				calendar.addYear();
 			}
 		}
 		
-//		void Button1Click(object sender, EventArgs e)
-//		{
-//			doNewAction();
-//		}
-//		
-//		void Button2Click(object sender, EventArgs e)
-//		{
-//			showAction();
-//		}
-//		
-//		
-//		void doNewAction() {
-//			String [] date = textBox1.Text.Split('.');
-//			int nDay = int.Parse(date[0]);
-//			int nMonth = int.Parse(date[1]);
-//			int nYear = int.Parse(date[2]);
-//			String popisDela = textBox2.Text;
-//			calendar.findDate(nDay, nMonth, nYear, popisDela);
-//		}
-//		
-//		void showAction() {
-//			DateTime d = new DateTime();
-//			
-//			String [] date = textBox3.Text.Split('.');
-//			int nDay = int.Parse(date[0]);
-//			int nMonth = int.Parse(date[1]);
-//			int nYear = int.Parse(date[2]);
-//			textBox4.Text = calendar.findDate(nDay, nMonth, nYear);
-//		}
+		void Button1Click(object sender, EventArgs e)
+		{
+			showAction();
+		
+		}
+		
+		void Button2Click(object sender, EventArgs e)
+		{
+			doNewAction();
+			textBox2.Text = "Pripominani uspesne ulozeno";
+		}
+		
+		
+		void doNewAction() {
+			String [] date = textBox1.Text.Split('.');
+			int nDay = int.Parse(date[0]);
+			int nMonth = int.Parse(date[1]);
+			int nYear = int.Parse(date[2]);
+			String popisDela = textBox2.Text;
+			calendar.findDate(nDay, nMonth, nYear, popisDela);
+		}
+		
+		void showAction() {
+			DateTime d = new DateTime();
+			String [] date = textBox1.Text.Split('.');
+			int nDay = int.Parse(date[0]);
+			int nMonth = int.Parse(date[1]);
+			int nYear = int.Parse(date[2]);
+			textBox2.Text = calendar.findDate(nDay, nMonth, nYear);
+		}
 		
 		
 		void MainFormLoad(object sender, EventArgs e)
+		{
+			
+		}
+		
+		void Label1Click(object sender, EventArgs e)
 		{
 			
 		}

@@ -36,28 +36,39 @@ namespace Organizer
 		
 		
 		public void findMonth( Year yearNeeded,int nMonth,int nDay, String popisDela) {
-			if (yearNeeded.Month[nMonth][nDay].toDoList == null) {
-				yearNeeded.Month[nMonth][nDay].toDoList= new ListAction(popisDela);
+			if (yearNeeded.Month[nMonth-1][nDay-1].toDoList == null) {
+				yearNeeded.Month[nMonth-1][nDay-1].toDoList= new ListAction(popisDela);
 			}
 			else {
-				Action templ = yearNeeded.Month[nMonth][nDay].toDoList.First;
+				Action templ = yearNeeded.Month[nMonth-1][nDay-1].toDoList.First;
 				while(templ.next!=null) {
 					templ = templ.next;
 				}
-				templ.PopisDela=popisDela;
+				templ.next = new Action(popisDela);
 			}
 		}
 		
 		public String findMonth( Year yearNeeded,int nMonth,int nDay) {
-			if (yearNeeded.Month[nMonth][nDay].toDoList == null) {
+			if (yearNeeded.Month[nMonth-1][nDay-1].toDoList == null) {
 			return "Записей нет";
 			}
 			else {
-				Action templ = yearNeeded.Month[nMonth][nDay].toDoList.First;
-				while(templ.next!=null) {
-					templ = templ.next;
+				Action templ = yearNeeded.Month[nMonth-1][nDay-1].toDoList.First;
+				String popis=null;
+				int count=-1;
+				while(templ!=null) {
+				count++;
+					
+					if (templ.PopisDela!=null) {
+						popis+=(count+1).ToString() + " - " + templ.PopisDela + "\r\n";
+					}
+					if (templ.next!=null){
+						templ = templ.next;
+					}
+					else 
+						break;
 				}
-				return templ.PopisDela;
+				return popis;
 			}
 		}
 		
