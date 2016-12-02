@@ -51,6 +51,13 @@ namespace Organizer
 		}
 		
 		
+		public String vypsatZIntervalu(int nDay1,int nMonth1,int nYear1,int nDay2,int nMonth2,int nYear2) {
+			Year startYear = findYear(nYear1);
+			Year finishYear = findYear(nYear2);
+			return startYear.vypsatZ(nDay1, nMonth1, startYear, nDay2, nMonth2, finishYear);
+		}
+		
+		
 		 Year  findYear(int nYear) {
 			Year templ = First;
 			for (int i=0; i< nYear-FirstYear; i++) {

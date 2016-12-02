@@ -78,5 +78,54 @@ namespace Organizer
 			yearNeeded.Month[nMonth-1][nDay-1].toDoList. removeAction(popisDela);
 		}
 		
-	}
-}
+		public String vypsatZ(int nDay1,int nMonth1,Year startYear,int nDay2,int nMonth2,Year finishYear) {
+			Day finishDay = finishYear.Month[nMonth2-1][nDay2] ;
+			Day templDay = startYear.Month[nMonth1-1][nDay1-1];
+			String popis=null;
+			int count=-1;
+			
+			while(finishDay!=templDay) {
+				if (startYear.Month[nMonth1-1][nDay1-1].toDoList == null) {
+			      		if (startYear.Month[nMonth1-1].Length-templDay.numberOfDay != 0) {
+			      			nDay1++;
+			      		}
+			      		else  if(nMonth1-1 != 12) {
+			      				nMonth1++;
+			      				nDay1=1;
+			      				}
+								else startYear=startYear.Next;
+			      		
+			      	
+				}
+				else {
+					Action templ = startYear.Month[nMonth1-1][nDay1-1].toDoList.First;
+					
+					while(templ!=null) {
+						count++;
+						if (templ.PopisDela!=null) {
+							popis+=(count+1).ToString() + " - " + templ.PopisDela + "\r\n";
+						}
+						if (templ.next!=null){
+							templ = templ.next;
+						}
+						else 
+							break;
+					}
+					if (startYear.Month[nMonth1-1].Length-templDay.numberOfDay != 0) {
+			      			nDay1++;
+			      		}
+			      		else  if(nMonth1-1 != 12) {
+			      				nMonth1++;
+			      				nDay1=1;
+			      				}
+								else startYear=startYear.Next;
+								
+				}
+			
+				templDay = startYear.Month[nMonth1-1][nDay1-1];
+			}
+			return popis;
+		
+	
+		}
+	}}
