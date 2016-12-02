@@ -7,7 +7,7 @@ namespace Organizer
 	/// </summary>
 	public class Action
 	{
-		public Action next;
+		public Action next{ get; set; }
 		public String PopisDela { get; set; }
 		public int priority { get; set; }         // 1-nejvyssi; 3-nejnissi
 		

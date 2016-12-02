@@ -6,7 +6,9 @@ namespace Organizer
 	/// Description of Year.
 	/// </summary>
 	public  class Year
-	{	public Year Next;
+	{	
+		public Year Next { get; set; }
+//		public Year Next;
 		protected int YearNumber;
 		protected  Day [][] Month = new Day[12][];
 			
@@ -70,6 +72,10 @@ namespace Organizer
 				}
 				return popis;
 			}
+		}
+		
+		public void vamazat(Year yearNeeded, int nMonth,int  nDay,String  popisDela){
+			yearNeeded.Month[nMonth-1][nDay-1].toDoList. removeAction(popisDela);
 		}
 		
 	}

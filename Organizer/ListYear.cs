@@ -8,8 +8,8 @@ namespace Organizer
 	public class ListYear
 	{	
 		int LenthCalendar=0;
-		 Year First;
-		int FirstYear = 2012;
+		Year First;
+		int FirstYear = 2016;
 		
 		public ListYear()
 		{ 	
@@ -43,6 +43,11 @@ namespace Organizer
 			Year yearNeeded = findYear(nYear);
 			String popisDela = yearNeeded.findMonth(yearNeeded, nMonth, nDay);
 			return popisDela;
+		}
+		
+		public void vymazatPropominani( int nDay, int nMonth,int nYear,String popisDela) {
+			Year yearNeeded = findYear(nYear);
+			yearNeeded.vamazat(yearNeeded, nMonth, nDay, popisDela);
 		}
 		
 		
