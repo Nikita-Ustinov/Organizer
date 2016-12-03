@@ -64,7 +64,7 @@ namespace Organizer
 			// 
 			// button1
 			// 
-			this.button1.Location = new System.Drawing.Point(128, 16);
+			this.button1.Location = new System.Drawing.Point(128, 110);
 			this.button1.Name = "button1";
 			this.button1.Size = new System.Drawing.Size(142, 24);
 			this.button1.TabIndex = 6;
@@ -74,7 +74,7 @@ namespace Organizer
 			// 
 			// button2
 			// 
-			this.button2.Location = new System.Drawing.Point(128, 69);
+			this.button2.Location = new System.Drawing.Point(128, 63);
 			this.button2.Name = "button2";
 			this.button2.Size = new System.Drawing.Size(142, 23);
 			this.button2.TabIndex = 7;
@@ -84,7 +84,7 @@ namespace Organizer
 			// 
 			// textBox1
 			// 
-			this.textBox1.Location = new System.Drawing.Point(128, 121);
+			this.textBox1.Location = new System.Drawing.Point(128, 22);
 			this.textBox1.Name = "textBox1";
 			this.textBox1.Size = new System.Drawing.Size(142, 20);
 			this.textBox1.TabIndex = 8;
@@ -120,8 +120,8 @@ namespace Organizer
 			// 
 			this.groupBox1.Controls.Add(this.button1);
 			this.groupBox1.Controls.Add(this.label1);
-			this.groupBox1.Controls.Add(this.button2);
 			this.groupBox1.Controls.Add(this.textBox1);
+			this.groupBox1.Controls.Add(this.button2);
 			this.groupBox1.Location = new System.Drawing.Point(12, 10);
 			this.groupBox1.Name = "groupBox1";
 			this.groupBox1.Size = new System.Drawing.Size(276, 169);

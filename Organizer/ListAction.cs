@@ -54,6 +54,7 @@ namespace Organizer
 			while(templ.PopisDela!=popis) {
 				count++;
 				templ= templ.next;
+				
 			}
 			templ = First;
 			while(count!=1){
@@ -62,5 +63,6 @@ namespace Organizer
 			}
 			templ.next=templ.next.next;
 		}
+		
 	}
 }

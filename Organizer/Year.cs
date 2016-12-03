@@ -89,12 +89,16 @@ namespace Organizer
 			      		if (startYear.Month[nMonth1-1].Length-templDay.numberOfDay != 0) {
 			      			nDay1++;
 			      		}
-			      		else  if(nMonth1-1 != 12) {
+			      		else  if(nMonth1 != 12) {
 			      				nMonth1++;
 			      				nDay1=1;
 			      				}
-								else startYear=startYear.Next;
-			      		
+							  else {
+									startYear=startYear.Next;
+									nMonth1=1;
+									nDay1=1;
+								}
+			      					
 			      	
 				}
 				else {
@@ -114,11 +118,15 @@ namespace Organizer
 					if (startYear.Month[nMonth1-1].Length-templDay.numberOfDay != 0) {
 			      			nDay1++;
 			      		}
-			      		else  if(nMonth1-1 != 12) {
+			      		else  if(nMonth1 != 12) {
 			      				nMonth1++;
 			      				nDay1=1;
 			      				}
-								else startYear=startYear.Next;
+								else {
+									startYear=startYear.Next;
+									nDay1=1;
+									nMonth1=1;
+					}
 								
 				}
 			
