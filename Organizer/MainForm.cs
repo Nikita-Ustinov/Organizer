@@ -2,6 +2,8 @@
 using System.Collections.Generic;
 using System.Drawing;
 using System.Windows.Forms;
+using System.IO;
+using System.Text;
 
 namespace Organizer
 {
@@ -12,9 +14,12 @@ namespace Organizer
 	{	
 		ListYear calendar = new ListYear();
 		DateTime nowDate = DateTime.Now;
-		
+		String jmeno=null;
+		String listAction = null;
+		int count=0;
 		public MainForm()
-		{	DateTime d = new DateTime();
+		{	
+			DateTime d = new DateTime();
 			createCalendar();
 			InitializeComponent();
 			label1.Text = "Vyberte datum na ktery chcete ulozit nove připomínání";
@@ -24,8 +29,10 @@ namespace Organizer
 			button3.Text = "Vymazat";
 			label2.Text="od";
 			label3.Text="do";	
-			label4.Text="-";	
-			button4.Text = "Zobrazit";		
+			label4.Text="-";
+			label5.Text="Vase jmeno";
+			button4.Text = "Zobrazit";
+			button5.Text = "Prihlasit se";	
 			showAction(d);
 		}
 
@@ -53,7 +60,8 @@ namespace Organizer
 			else {
 				doNewAction();
 				textBox2.Text = "Pripominani uspesne ulozeno";
-			}
+				count++;
+				}
 			
 		}
 
@@ -117,6 +125,15 @@ namespace Organizer
 				int nYear = int.Parse(date[2]);
 				String popisDela = textBox2.Text;
 				calendar.findDate(nDay, nMonth, nYear, popisDela);
+				listAction+=nDay.ToString()+"."+nMonth.ToString()+"."+nYear.ToString()+"\r\n" + popisDela+"\r\n";
+				if (count==0) {
+					try {
+						listAction = File.ReadAllText(jmeno);
+						}
+					catch(Exception ee) {
+						}
+				}
+				File.WriteAllText(jmeno, listAction);
 			}
 			catch (Exception ee){
 				textBox2.Text = "Spatny format datumu! Zadejte datum ve tvaru d.m.rrrr ";
@@ -146,21 +163,36 @@ namespace Organizer
 		}
 		
 		
-		void MainFormLoad(object sender, EventArgs e)
+		void Button5Click(object sender, EventArgs e)
 		{
-			
+			if (textBox6.Text!= "") {
+				jmeno=textBox6.Text+ ".txt";
+				try {
+				textBox2.Text = "Jste prihlasen/a jako " + jmeno;
+				deseralizace(jmeno);
+				}
+				catch (Exception ee) {}
+			}
+			else 
+				textBox2.Text = "Nezadali jste zadne jmeno!";
 		}
 		
-		void Label1Click(object sender, EventArgs e)
-		{
-			
+		void deseralizace(String jmeno) {
+			using (StreamReader sr = new StreamReader(@jmeno))
+			{
+				String popisDela = null;
+				String dataText = null;
+				while(!sr.EndOfStream)
+				{
+					dataText=sr.ReadLine().ToString();
+					popisDela = sr.ReadLine().ToString();
+					String [] date = dataText.Split('.');
+					int nDay = int.Parse(date[0]);
+					int nMonth = int.Parse(date[1]);
+					int nYear = int.Parse(date[2]);
+					calendar.findDate(nDay, nMonth, nYear, popisDela);
+				}
+			}
 		}
-		
-		void TextBox3TextChanged(object sender, EventArgs e)
-		{
-			
-		}
-		
-		
 	}
 }
