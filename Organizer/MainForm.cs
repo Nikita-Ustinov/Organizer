@@ -128,7 +128,7 @@ namespace Organizer
 				listAction+=nDay.ToString()+"."+nMonth.ToString()+"."+nYear.ToString()+"\r\n" + popisDela+"\r\n";
 				if (count==0) {
 					try {
-						listAction = File.ReadAllText(jmeno);
+						listAction = File.ReadAllText(jmeno).ToString();
 						}
 					catch(Exception ee) {
 						}
