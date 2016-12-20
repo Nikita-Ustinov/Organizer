@@ -1,10 +1,13 @@
 ﻿using System;
-
+using System.Runtime.Serialization.Formatters.Binary;
 namespace Organizer
 {
 	/// <summary>
 	/// Description of NormalYear.
 	/// </summary>
+	/// 
+	
+	[Serializable]
 	public class NormalYear: Year
 	{
 		

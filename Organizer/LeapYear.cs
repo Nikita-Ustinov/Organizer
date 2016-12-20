@@ -1,8 +1,9 @@
 ﻿using System;
-
+using System.Runtime.Serialization.Formatters.Binary;
 namespace Organizer
 {
 	
+	[Serializable]
 	public class LeapYear: Year
 	{	
 		

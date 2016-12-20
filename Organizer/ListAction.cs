@@ -1,10 +1,11 @@
 ﻿using System;
-
+using System.Runtime.Serialization.Formatters.Binary;
 namespace Organizer
 {
+	
+	[Serializable]
 	public class ListAction
 	{
-		int LengthToDoList=0;
 		public Action First { get; set; }
 		
 		public ListAction(String popisDela)
@@ -17,35 +18,12 @@ namespace Organizer
 			}
 		}
 		
-		public ListAction(String popisDela, int priority)
-		{ 	
-			if (First==null) {
-				First = new Action(popisDela, priority);
-			}
-			else {
-				Action templ;
-				templ=First;
-				while(templ.next!=null) {
-					templ=templ.next;
-				}
-				templ.next= new Action(popisDela, priority);
-			}
-		}
-		
 		public void addAction(String popisDela) {
 				Action templ=First;				
 				while(templ.next!=null) {
 					templ=templ.next;
 				}
 				templ.next= new Action(popisDela);
-		}
-		
-		public void addAction(String popisDela, int priority) {
-					Action templ=First;				
-				while(templ.next!=null) {
-					templ=templ.next;
-				}
-				templ.next= new Action(popisDela, priority );
 		}
 		
 		public void removeAction(String popis) {
@@ -57,11 +35,27 @@ namespace Organizer
 				
 			}
 			templ = First;
-			while(count!=1){
-				templ=templ.next;
-				count--;
+			if (count != 0){
+				while(count!=1){
+					templ=templ.next;
+					count--;
+				}
+				if (templ.next.next != null) {
+					templ.next=templ.next.next;
+				}
+				else {
+					templ.next = null;
+				}
 			}
-			templ.next=templ.next.next;
+			else {
+				if (First.next == null) {
+					First = null;
+				}
+				else {
+					First=First.next;
+				}
+				
+			}
 		}
 		
 	}

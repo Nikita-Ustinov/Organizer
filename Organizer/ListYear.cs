@@ -1,10 +1,14 @@
 ﻿using System;
+using System.Runtime.Serialization.Formatters.Binary;
 
 namespace Organizer
 {
 	/// <summary>
 	/// Description of ListYear.
 	/// </summary>
+	/// 
+	
+	[Serializable]
 	public class ListYear
 	{	
 		int LenthCalendar=0;

@@ -1,14 +1,21 @@
 ﻿using System;
+using System.Xml;
+using System.Text;
+using System.Collections;
+using System.IO;
+using System.Runtime.Serialization.Formatters.Binary;
 
 namespace Organizer
 {
 	/// <summary>
 	/// Description of Year.
 	/// </summary>
+	/// 
+	
+	[Serializable]
 	public  class Year
 	{	
 		public Year Next { get; set; }
-//		public Year Next;
 		protected int YearNumber;
 		protected  Day [][] Month = new Day[12][];
 			
@@ -16,24 +23,6 @@ namespace Organizer
 		
 		public Year(int numberOfYear){
 			YearNumber=numberOfYear;
-		}
-		
-		public String  writeYears() {
-			String s=null;
-			int count=0;
-			for (int i=0; i<12; i++) {
-				for (int j=0; j<Month[i].Length; j++) {
-					s+=Month[i][j].numberOfDay;
-					s+=" ";
-					count++;
-					if (count==7){
-						s+="\r\n";
-						count=0;
-					}
-				}
-			}
-			
-			return s;
 		}
 		
 		
@@ -52,7 +41,7 @@ namespace Organizer
 		
 		public String findMonth( Year yearNeeded,int nMonth,int nDay) {
 			if (yearNeeded.Month[nMonth-1][nDay-1].toDoList == null) {
-			return "Записей нет";
+			return "";
 			}
 			else {
 				Action templ = yearNeeded.Month[nMonth-1][nDay-1].toDoList.First;
@@ -74,11 +63,11 @@ namespace Organizer
 			}
 		}
 		
-		public void vamazat(Year yearNeeded, int nMonth,int  nDay,String  popisDela){
+		public void vamazat(Year yearNeeded, int nMonth, int  nDay, String  popisDela){
 			yearNeeded.Month[nMonth-1][nDay-1].toDoList. removeAction(popisDela);
 		}
 		
-		public String vypsatZ(int nDay1,int nMonth1,Year startYear,int nDay2,int nMonth2,Year finishYear) {
+		public String vypsatZ(int nDay1, int nMonth1, Year startYear, int nDay2, int nMonth2, Year finishYear) {
 			Day finishDay = finishYear.Month[nMonth2-1][nDay2] ;
 			Day templDay = startYear.Month[nMonth1-1][nDay1-1];
 			String popis=null;
@@ -135,5 +124,6 @@ namespace Organizer
 			return popis;
 		
 	
-		}
-	}}
+		}	
+	}
+}

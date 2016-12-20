@@ -35,12 +35,16 @@ namespace Organizer
 			this.label1 = new System.Windows.Forms.Label();
 			this.button1 = new System.Windows.Forms.Button();
 			this.button2 = new System.Windows.Forms.Button();
-			this.textBox1 = new System.Windows.Forms.TextBox();
 			this.textBox2 = new System.Windows.Forms.TextBox();
 			this.button3 = new System.Windows.Forms.Button();
 			this.textBox3 = new System.Windows.Forms.TextBox();
 			this.groupBox1 = new System.Windows.Forms.GroupBox();
+			this.textBox1 = new System.Windows.Forms.TextBox();
+			this.monthCalendar1 = new System.Windows.Forms.MonthCalendar();
 			this.groupBox2 = new System.Windows.Forms.GroupBox();
+			this.label7 = new System.Windows.Forms.Label();
+			this.label6 = new System.Windows.Forms.Label();
+			this.textBox7 = new System.Windows.Forms.TextBox();
 			this.groupBox3 = new System.Windows.Forms.GroupBox();
 			this.button4 = new System.Windows.Forms.Button();
 			this.label4 = new System.Windows.Forms.Label();
@@ -52,6 +56,7 @@ namespace Organizer
 			this.textBox6 = new System.Windows.Forms.TextBox();
 			this.button5 = new System.Windows.Forms.Button();
 			this.groupBox4 = new System.Windows.Forms.GroupBox();
+			this.label8 = new System.Windows.Forms.Label();
 			this.groupBox1.SuspendLayout();
 			this.groupBox2.SuspendLayout();
 			this.groupBox3.SuspendLayout();
@@ -60,16 +65,15 @@ namespace Organizer
 			// 
 			// label1
 			// 
-			this.label1.Location = new System.Drawing.Point(6, 16);
+			this.label1.Location = new System.Drawing.Point(182, 16);
 			this.label1.Name = "label1";
 			this.label1.Size = new System.Drawing.Size(116, 61);
 			this.label1.TabIndex = 5;
 			this.label1.Text = "label1";
-//			this.label1.Click += new System.EventHandler(this.Label1Click);
 			// 
 			// button1
 			// 
-			this.button1.Location = new System.Drawing.Point(128, 110);
+			this.button1.Location = new System.Drawing.Point(182, 147);
 			this.button1.Name = "button1";
 			this.button1.Size = new System.Drawing.Size(142, 24);
 			this.button1.TabIndex = 6;
@@ -79,7 +83,7 @@ namespace Organizer
 			// 
 			// button2
 			// 
-			this.button2.Location = new System.Drawing.Point(128, 63);
+			this.button2.Location = new System.Drawing.Point(182, 118);
 			this.button2.Name = "button2";
 			this.button2.Size = new System.Drawing.Size(142, 23);
 			this.button2.TabIndex = 7;
@@ -87,26 +91,19 @@ namespace Organizer
 			this.button2.UseVisualStyleBackColor = true;
 			this.button2.Click += new System.EventHandler(this.Button2Click);
 			// 
-			// textBox1
-			// 
-			this.textBox1.Location = new System.Drawing.Point(128, 22);
-			this.textBox1.Name = "textBox1";
-			this.textBox1.Size = new System.Drawing.Size(142, 20);
-			this.textBox1.TabIndex = 8;
-			// 
 			// textBox2
 			// 
-			this.textBox2.Location = new System.Drawing.Point(18, 267);
+			this.textBox2.Location = new System.Drawing.Point(18, 195);
 			this.textBox2.Multiline = true;
 			this.textBox2.Name = "textBox2";
-			this.textBox2.Size = new System.Drawing.Size(676, 153);
+			this.textBox2.Size = new System.Drawing.Size(330, 171);
 			this.textBox2.TabIndex = 9;
 			// 
 			// button3
 			// 
-			this.button3.Location = new System.Drawing.Point(18, 140);
+			this.button3.Location = new System.Drawing.Point(6, 166);
 			this.button3.Name = "button3";
-			this.button3.Size = new System.Drawing.Size(155, 23);
+			this.button3.Size = new System.Drawing.Size(191, 23);
 			this.button3.TabIndex = 10;
 			this.button3.Text = "button3";
 			this.button3.UseVisualStyleBackColor = true;
@@ -114,35 +111,75 @@ namespace Organizer
 			// 
 			// textBox3
 			// 
-			this.textBox3.Location = new System.Drawing.Point(18, 24);
+			this.textBox3.Location = new System.Drawing.Point(7, 75);
 			this.textBox3.Multiline = true;
 			this.textBox3.Name = "textBox3";
-			this.textBox3.Size = new System.Drawing.Size(155, 110);
+			this.textBox3.Size = new System.Drawing.Size(190, 85);
 			this.textBox3.TabIndex = 11;
-//			this.textBox3.TextChanged += new System.EventHandler(this.TextBox3TextChanged);
 			// 
 			// groupBox1
 			// 
-			this.groupBox1.Controls.Add(this.button1);
+			this.groupBox1.Controls.Add(this.label8);
 			this.groupBox1.Controls.Add(this.label1);
 			this.groupBox1.Controls.Add(this.textBox1);
+			this.groupBox1.Controls.Add(this.button1);
 			this.groupBox1.Controls.Add(this.button2);
-			this.groupBox1.Location = new System.Drawing.Point(12, 84);
+			this.groupBox1.Controls.Add(this.monthCalendar1);
+			this.groupBox1.Location = new System.Drawing.Point(12, 12);
 			this.groupBox1.Name = "groupBox1";
-			this.groupBox1.Size = new System.Drawing.Size(276, 169);
+			this.groupBox1.Size = new System.Drawing.Size(336, 177);
 			this.groupBox1.TabIndex = 13;
 			this.groupBox1.TabStop = false;
 			// 
+			// textBox1
+			// 
+			this.textBox1.Location = new System.Drawing.Point(182, 92);
+			this.textBox1.Name = "textBox1";
+			this.textBox1.Size = new System.Drawing.Size(142, 20);
+			this.textBox1.TabIndex = 20;
+			// 
+			// monthCalendar1
+			// 
+			this.monthCalendar1.Location = new System.Drawing.Point(6, 9);
+			this.monthCalendar1.Name = "monthCalendar1";
+			this.monthCalendar1.TabIndex = 19;
+			// 
 			// groupBox2
 			// 
+			this.groupBox2.Controls.Add(this.label7);
+			this.groupBox2.Controls.Add(this.label6);
+			this.groupBox2.Controls.Add(this.textBox7);
 			this.groupBox2.Controls.Add(this.textBox3);
 			this.groupBox2.Controls.Add(this.button3);
-			this.groupBox2.Location = new System.Drawing.Point(294, 84);
+			this.groupBox2.Location = new System.Drawing.Point(354, 159);
 			this.groupBox2.Name = "groupBox2";
-			this.groupBox2.Size = new System.Drawing.Size(190, 169);
+			this.groupBox2.Size = new System.Drawing.Size(203, 207);
 			this.groupBox2.TabIndex = 9;
 			this.groupBox2.TabStop = false;
 			this.groupBox2.Text = "Vymazani";
+			// 
+			// label7
+			// 
+			this.label7.Location = new System.Drawing.Point(6, 49);
+			this.label7.Name = "label7";
+			this.label7.Size = new System.Drawing.Size(82, 23);
+			this.label7.TabIndex = 14;
+			this.label7.Text = "label7";
+			// 
+			// label6
+			// 
+			this.label6.Location = new System.Drawing.Point(6, 22);
+			this.label6.Name = "label6";
+			this.label6.Size = new System.Drawing.Size(51, 17);
+			this.label6.TabIndex = 13;
+			this.label6.Text = "label6";
+			// 
+			// textBox7
+			// 
+			this.textBox7.Location = new System.Drawing.Point(63, 19);
+			this.textBox7.Name = "textBox7";
+			this.textBox7.Size = new System.Drawing.Size(81, 20);
+			this.textBox7.TabIndex = 12;
 			// 
 			// groupBox3
 			// 
@@ -152,9 +189,9 @@ namespace Organizer
 			this.groupBox3.Controls.Add(this.textBox4);
 			this.groupBox3.Controls.Add(this.label3);
 			this.groupBox3.Controls.Add(this.label2);
-			this.groupBox3.Location = new System.Drawing.Point(491, 87);
+			this.groupBox3.Location = new System.Drawing.Point(354, 14);
 			this.groupBox3.Name = "groupBox3";
-			this.groupBox3.Size = new System.Drawing.Size(203, 166);
+			this.groupBox3.Size = new System.Drawing.Size(203, 139);
 			this.groupBox3.TabIndex = 14;
 			this.groupBox3.TabStop = false;
 			this.groupBox3.Text = "Vyberte interval";
@@ -209,15 +246,15 @@ namespace Organizer
 			// 
 			// label5
 			// 
-			this.label5.Location = new System.Drawing.Point(6, 16);
+			this.label5.Location = new System.Drawing.Point(6, 19);
 			this.label5.Name = "label5";
-			this.label5.Size = new System.Drawing.Size(100, 23);
+			this.label5.Size = new System.Drawing.Size(65, 23);
 			this.label5.TabIndex = 15;
 			this.label5.Text = "label5";
 			// 
 			// textBox6
 			// 
-			this.textBox6.Location = new System.Drawing.Point(122, 13);
+			this.textBox6.Location = new System.Drawing.Point(77, 16);
 			this.textBox6.Name = "textBox6";
 			this.textBox6.Size = new System.Drawing.Size(132, 20);
 			this.textBox6.TabIndex = 16;
@@ -237,18 +274,26 @@ namespace Organizer
 			this.groupBox4.Controls.Add(this.label5);
 			this.groupBox4.Controls.Add(this.button5);
 			this.groupBox4.Controls.Add(this.textBox6);
-			this.groupBox4.Location = new System.Drawing.Point(12, 3);
+			this.groupBox4.Location = new System.Drawing.Point(150, 12);
 			this.groupBox4.Name = "groupBox4";
 			this.groupBox4.Size = new System.Drawing.Size(264, 75);
 			this.groupBox4.TabIndex = 18;
 			this.groupBox4.TabStop = false;
 			this.groupBox4.Text = "Prihlaseni";
 			// 
+			// label8
+			// 
+			this.label8.Location = new System.Drawing.Point(182, 70);
+			this.label8.Name = "label8";
+			this.label8.Size = new System.Drawing.Size(100, 19);
+			this.label8.TabIndex = 21;
+			this.label8.Text = "label8";
+			// 
 			// MainForm
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-			this.ClientSize = new System.Drawing.Size(729, 433);
+			this.ClientSize = new System.Drawing.Size(565, 374);
 			this.Controls.Add(this.groupBox4);
 			this.Controls.Add(this.groupBox3);
 			this.Controls.Add(this.groupBox2);
@@ -256,7 +301,6 @@ namespace Organizer
 			this.Controls.Add(this.textBox2);
 			this.Name = "MainForm";
 			this.Text = "Organizer";
-//			this.Load += new System.EventHandler(this.MainFormLoad);
 			this.groupBox1.ResumeLayout(false);
 			this.groupBox1.PerformLayout();
 			this.groupBox2.ResumeLayout(false);
@@ -268,6 +312,12 @@ namespace Organizer
 			this.ResumeLayout(false);
 			this.PerformLayout();
 		}
+		private System.Windows.Forms.Label label8;
+		private System.Windows.Forms.TextBox textBox7;
+		private System.Windows.Forms.Label label6;
+		private System.Windows.Forms.Label label7;
+		private System.Windows.Forms.TextBox textBox1;
+		private System.Windows.Forms.MonthCalendar monthCalendar1;
 		private System.Windows.Forms.GroupBox groupBox4;
 		private System.Windows.Forms.Button button5;
 		private System.Windows.Forms.TextBox textBox6;
@@ -284,14 +334,8 @@ namespace Organizer
 		private System.Windows.Forms.TextBox textBox3;
 		private System.Windows.Forms.Button button3;
 		private System.Windows.Forms.TextBox textBox2;
-		private System.Windows.Forms.TextBox textBox1;
 		private System.Windows.Forms.Button button2;
 		private System.Windows.Forms.Button button1;
 		private System.Windows.Forms.Label label1;
-		
-		void CheckedListBox1SelectedIndexChanged(object sender, EventArgs e)
-		{
-//			checkedListBox1.Text = "Hello";
-		}
 	}
 }
