@@ -26,7 +26,7 @@ namespace Organizer
 		}
 		
 		
-		public void findMonth( Year yearNeeded,int nMonth,int nDay, String popisDela) {
+		public void findMonth( Year yearNeeded,int nMonth,int nDay, String popisDela) {			// tvori nove pripominani
 			if (yearNeeded.Month[nMonth-1][nDay-1].toDoList == null) {
 				yearNeeded.Month[nMonth-1][nDay-1].toDoList= new ListAction(popisDela);
 			}
@@ -39,7 +39,7 @@ namespace Organizer
 			}
 		}
 		
-		public String findMonth( Year yearNeeded,int nMonth,int nDay) {
+		public String findMonth( Year yearNeeded,int nMonth,int nDay) {						// vrati seznam pripominani za den ve Stringu 
 			if (yearNeeded.Month[nMonth-1][nDay-1].toDoList == null) {
 			return "";
 			}
@@ -63,11 +63,11 @@ namespace Organizer
 			}
 		}
 		
-		public void vamazat(Year yearNeeded, int nMonth, int  nDay, String  popisDela){
+		public void vamazat(Year yearNeeded, int nMonth, int  nDay, String  popisDela){			
 			yearNeeded.Month[nMonth-1][nDay-1].toDoList. removeAction(popisDela);
 		}
 		
-		public String vypsatZ(int nDay1, int nMonth1, Year startYear, int nDay2, int nMonth2, Year finishYear) {
+		public String vypsatZ(int nDay1, int nMonth1, Year startYear, int nDay2, int nMonth2, Year finishYear) {			//vrati seznam pripominani z intervalu
 			Day finishDay = finishYear.Month[nMonth2-1][nDay2] ;
 			Day templDay = startYear.Month[nMonth1-1][nDay1-1];
 			String popis=null;

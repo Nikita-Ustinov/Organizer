@@ -29,10 +29,9 @@ namespace Organizer
 		public void removeAction(String popis) {
 			Action templ = First;
 			int count=0;
-			while(templ.PopisDela!=popis) {
+			while(!templ.PopisDela.StartsWith(popis)) {
 				count++;
 				templ= templ.next;
-				
 			}
 			templ = First;
 			if (count != 0){

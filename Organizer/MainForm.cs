@@ -105,7 +105,7 @@ namespace Organizer
 			
 		}
 		
-		void vsichnyPripminani(int nDay1,int nMonth1,int nYear1,int nDay2,int nMonth2,int nYear2) {
+		void vsichnyPripminani(int nDay1,int nMonth1,int nYear1,int nDay2,int nMonth2,int nYear2) {			// zobrazuje seznam pripominani z intervalu
 			if ((nDay1==nDay2)&&(nMonth1==nMonth2)&&(nYear2==nYear1)){
 				textBox2.Text = "Mate v intervalu je jeden den. Zadejte vetsi interval";
 			}
@@ -120,9 +120,9 @@ namespace Organizer
 		}
 	
 		
-		void doNewAction() {
+		void doNewAction() {															// vyttori nove propominani
 				int nDay, nYear, nMonth;
-				if ((textBox1.Text != null)&& (textBox1.Text != "")) {
+				if ((textBox1.Text != null)&&(textBox1.Text != "")) {
 					String [] date = textBox1.Text.Split('.');
 					nDay = int.Parse(date[0]);
 					nMonth = int.Parse(date[1]);
@@ -141,7 +141,7 @@ namespace Organizer
 			}
 		
 		
-		void showAction() {
+		void showAction() {														//zobrazi pripominani z jednoho dne
 				int nDay, nYear, nMonth;
 				if ((textBox1.Text != null)&&(textBox1.Text != "")) {
 					String [] date = textBox1.Text.Split('.');
@@ -163,7 +163,7 @@ namespace Organizer
 				textBox2.Text = calendar.findDate(nDay, nMonth, nYear);
 		}
 		
-		void showActionToday() {
+		void showActionToday() {								//startova metoda, ktera zobrazi seznam pripominani na dneska pri startu programu
 			DateTime d = new DateTime();
 			d=DateTime.Now;
 			int nDay = d.Day;
@@ -216,5 +216,7 @@ namespace Organizer
 				createCalendar();
 			}
 		}
+		
+		
 	}
 }

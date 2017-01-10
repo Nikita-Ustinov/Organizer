@@ -38,12 +38,12 @@ namespace Organizer
 			return FirstYear+LenthCalendar-1;
 		}
 		
-		public void findDate(int nDay,int nMonth,int nYear, String popisDela){
+		public void findDate(int nDay,int nMonth,int nYear, String popisDela){			// nahazi datum ke kteremu je potreba pridat nove pripominani
 			Year yearNeeded = findYear(nYear);
 			yearNeeded.findMonth(yearNeeded, nMonth, nDay, popisDela);
 		}
 		
-		public String findDate(int nDay,int nMonth,int nYear) {
+		public String findDate(int nDay,int nMonth,int nYear) {							// vrati seznam pripominani
 			Year yearNeeded = findYear(nYear);
 			String popisDela = yearNeeded.findMonth(yearNeeded, nMonth, nDay);
 			return popisDela;
@@ -62,7 +62,7 @@ namespace Organizer
 		}
 		
 		
-		 Year  findYear(int nYear) {
+		 Year  findYear(int nYear) {						// hleda rok z kterem dal muzeme pracovat
 			Year templ = First;
 			for (int i=0; i< nYear-FirstYear; i++) {
 				templ=templ.Next;
